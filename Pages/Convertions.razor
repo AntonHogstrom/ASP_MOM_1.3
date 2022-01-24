@@ -1,0 +1,37 @@
+﻿@page "/convertions"
+
+
+<PageTitle>Blazor - Convertions</PageTitle>
+<h1>Convertions</h1>
+
+<h2>Meter to Feet</h2>
+<label for="meters">Meters:</label>
+<input type="number" id="meters" name="meters" @bind="meters" />
+<button onclick=@calculateFeet>Convert</button>
+
+<p>@meters Meters = @feet Feet</p>
+
+<h2>KM/H to Miles/H</h2>
+<label for="km">KM/H:</label>
+<input type="number" id="km" name="km" @bind="kilometers" />
+<button onclick=@calculateMiles>Convert</button>
+
+<p>@kilometers km/h = @miles mph</p>
+
+@code {
+    double meters;
+    double feet;
+
+    double kilometers;
+    double miles;
+
+    void calculateFeet()
+    {
+        feet = Math.Round((meters * 3.28084), 2);
+    }
+
+    void calculateMiles()
+    {
+        miles = Math.Round(kilometers / 1.6);
+    }
+}

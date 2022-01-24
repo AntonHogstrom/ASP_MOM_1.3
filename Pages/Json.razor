@@ -1,0 +1,39 @@
+﻿@page "/json"
+@inject HttpClient Http
+
+<PageTitle>Blazor - JSON</PageTitle>
+<h1>JSON</h1>
+
+@if (games == null)
+{
+    <p>Loading data..</p>
+}
+else
+{
+    foreach (var game in games)
+    {
+        <ul>
+            <li>@game.name</li>
+            <li>@game.genre</li>
+            <li>@game.release</li>
+        </ul>
+    }
+}
+
+
+
+@code {
+    private Games[]? games;
+
+    protected override async Task OnInitializedAsync()
+    {
+        games = await Http.GetFromJsonAsync<Games[]>("json/games.json");
+    }
+
+    public class Games
+    {
+        public string? name { get; set; }
+        public string? genre { get; set; }
+        public string? release { get; set; }
+    }
+}

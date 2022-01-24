@@ -1,0 +1,27 @@
+﻿  [
+    {
+      "name": "Escape From Tarkov",
+      "genre": "fps",
+      "release": "2017"
+    },
+    {
+      "name": "World of Warcraft",
+      "genre": "MMORPG",
+      "release": "2004"
+    },
+    {
+      "name": "Diablo II",
+      "genre": "ARPG",
+      "release": "2000"
+    },
+    {
+      "name": "Call of Duty: Modern Warfare 2",
+      "genre": "fps",
+      "release": "2009"
+    },
+    {
+      "name": "Star Wars: Republic Commando",
+      "genre": "fps",
+      "release": "2005"
+    }
+  ]
